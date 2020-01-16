@@ -103,7 +103,7 @@ select * from persons where lastName like '%O'; -- 以N结尾
 select * from persons where lastName like 'ABC_'; -- ABC0、ABC1、ABC2、ABCD等
 select * from persons where lastName like '[ABC]%'; -- 以A或B或C开头,MySQL中不可用
 ```
-通配符中如果要对`%`和`_`进行转移，需要用到`escape`：
+通配符中如果要对`%`和`_`进行转义，需要用到`escape`：
 ```sql
 select * from persons where lastName like '%_%'; -- 可以匹配到很多不用的数据;
 select * from persons where lastName like '%/_%' escape '/'; -- 匹配带下划线的lastName;
